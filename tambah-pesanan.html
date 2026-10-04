@@ -3,61 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Soapboyz Laundry</title>
+    <title>Tambah Pesanan - Soapboyz Laundry</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Manajemen Pesanan Soapboyz Laundry</h1>
-        <p>Sistem pencatatan jasa cuci sepatu.</p>
+        <h1>Soapboyz Laundry</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Daftar Pesanan</a></li>
-            <li><a href="tambah-pesanan.html">Tambah Pesanan Baru</a></li>
+            <li><a href="index.html">Kembali ke Daftar Pesanan</a></li>
         </ul>
     </nav>
 
     <main>
-        <section>
-            <h2>Daftar Pesanan Masuk</h2>
-            <p>Berikut adalah daftar sepatu pelanggan yang sedang dalam proses pencucian:</p>
-            
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>ID Pesanan</th>
-                        <th>Nama Pelanggan</th>
-                        <th>Merek Sepatu</th>
-                        <th>Jenis Layanan</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>#SBZ-001</td>
-                        <td>Muh. Dzaky Mushaddaq</td>
-                        <td>Nike Air Force 1</td>
-                        <td>Deep Cleaning</td>
-                        <td>Proses Cuci</td>
-                        <td><a href="detail-pesanan.html">Lihat Detail</a></td>
-                    </tr>
-                    <tr>
-                        <td>#SBZ-002</td>
-                        <td>Budi Santoso</td>
-                        <td>Vans Old Skool</td>
-                        <td>Fast Cleaning</td>
-                        <td>Selesai</td>
-                        <td><a href="detail-pesanan.html">Lihat Detail</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+        <div class="container">
+            <h2>Formulir Pesanan Cucian Baru</h2>
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="nama_pelanggan">Nama Pelanggan:</label>
+                    <input type="text" id="nama_pelanggan" name="nama_pelanggan" required>
+                </div>
 
-    <footer>
-        <p>&copy; 2026 Soapboyz Laundry Bandung. Semua hak cipta dilindungi.</p>
-    </footer>
+                <div class="form-group">
+                    <label for="merek_sepatu">Merek & Tipe Sepatu:</label>
+                    <input type="text" id="merek_sepatu" name="merek_sepatu" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="layanan">Jenis Layanan Cuci:</label>
+                    <select id="layanan" name="layanan">
+                        <option value="fast">Fast Cleaning</option>
+                        <option value="deep">Deep Cleaning</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Simpan Pesanan</button>
+                    <button type="reset">Reset Batal</button>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

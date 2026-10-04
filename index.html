@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Soapboyz Laundry</title>
+    <!-- Menghubungkan external stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Manajemen Pesanan Soapboyz Laundry</h1>
+        <h1>Manajemen Pesanan Soapboyz</h1>
         <p>Sistem pencatatan jasa cuci sepatu.</p>
     </header>
 
@@ -19,17 +21,17 @@
     </nav>
 
     <main>
-        <section>
+        <!-- Penggunaan div pengelompok -->
+        <div class="container">
             <h2>Daftar Pesanan Masuk</h2>
             <p>Berikut adalah daftar sepatu pelanggan yang sedang dalam proses pencucian:</p>
             
-            <table border="1">
+            <table>
                 <thead>
                     <tr>
                         <th>ID Pesanan</th>
                         <th>Nama Pelanggan</th>
                         <th>Merek Sepatu</th>
-                        <th>Jenis Layanan</th>
                         <th>Status</th>
                         <th>Aksi</th>
                     </tr>
@@ -37,27 +39,14 @@
                 <tbody>
                     <tr>
                         <td>#SBZ-001</td>
-                        <td>Muh. Dzaky Mushaddaq</td>
+                        <td>Ahmad Fikri</td>
                         <td>Nike Air Force 1</td>
-                        <td>Deep Cleaning</td>
-                        <td>Proses Cuci</td>
-                        <td><a href="detail-pesanan.html">Lihat Detail</a></td>
-                    </tr>
-                    <tr>
-                        <td>#SBZ-002</td>
-                        <td>Budi Santoso</td>
-                        <td>Vans Old Skool</td>
-                        <td>Fast Cleaning</td>
-                        <td>Selesai</td>
+                        <td><span class="status-badge">Proses Cuci</span></td>
                         <td><a href="detail-pesanan.html">Lihat Detail</a></td>
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Soapboyz Laundry Bandung. Semua hak cipta dilindungi.</p>
-    </footer>
 </body>
 </html>

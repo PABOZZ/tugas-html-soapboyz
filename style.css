@@ -1,0 +1,147 @@
+/* style.css */
+
+/* 1. Font properties & Pengaturan warna dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Pengaturan warna & Alignment teks pada header */
+header {
+    background-color: #1e3a8a; /* Biru tua tema identitas */
+    color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+/* 2. Styling list (ul/ol) untuk menu navigasi */
+nav {
+    background-color: #2563eb;
+}
+
+nav ul {
+    list-style-type: none; /* Menghilangkan titik/bullet */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Membuat menu sejajar horizontal di desktop */
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #3b82f6;
+}
+
+/* 3. Penggunaan <div> untuk mengelompokkan elemen */
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Styling Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+/* Styling Elemen Form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="reset"] {
+    background-color: #dc2626;
+}
+
+/* Penggunaan <span> untuk styling khusus teks status */
+.status-badge {
+    background-color: #fbbf24;
+    color: #000;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* 4. Responsive dasar menggunakan @media query */
+@media screen and (max-width: 600px) {
+    /* Mengubah menu dari horizontal menjadi vertikal saat layar sempit */
+    nav ul {
+        flex-direction: column; 
+    }
+    
+    nav ul li a {
+        padding: 12px;
+        border-bottom: 1px solid #1e3a8a;
+    }
+
+    /* Menyesuaikan lebar container untuk layar mobile */
+    .container {
+        width: 95%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+}
