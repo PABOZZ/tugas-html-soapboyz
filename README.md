@@ -18,3 +18,15 @@ Dalam proyek ini, saya memilih menggunakan **Tailwind CSS** sebagai *framework* 
 3. Jalankan perintah `npm install` untuk mengunduh semua *dependencies*.
 4. Jalankan perintah `npm run dev` untuk menyalakan *server* lokal.
 5. Buka tautan `http://localhost:5173/` di *browser*.
+
+## Implementasi AJAX dan API Eksternal (Tugas Pekan 7)
+
+**1. Endpoint API yang Dipakai:**
+Saya menggunakan API *mock* publik dari JSONPlaceholder dengan *endpoint* `https://jsonplaceholder.typicode.com/users`. Alasan pemilihan *endpoint* ini adalah karena struktur datanya (berisi objek profil, nama, email, dan alamat kota) sangat relevan untuk disimulasikan sebagai "Data Member Loyal" pada sistem manajemen Soapboyz Laundry.
+
+**2. Pola Penanganan Loading & Error:**
+Saya menggunakan 3 *state* React untuk mengontrol siklus *fetch* data, yaitu `members` (untuk menyimpan data), `loading` (boolean), dan `error` (menyimpan pesan *error*). 
+- **Fungsi Penanganan:** Saya menempatkan logika `fetch()` asinkron di dalam fungsi `fetchMembers()`. 
+- **Loading:** Pada awal fungsi, `setLoading(true)` dipanggil. Di UI, ini direspons dengan merender komponen indikator "*Sedang memuat data...*".
+- **Error & Interaksi:** Jika *response* tidak ok atau koneksi gagal, blok `catch (err)` akan menangkap *error* dan menyimpannya di *state* `error`. Hal ini memicu *conditional rendering* yang menampilkan pesan kegagalan beserta tombol **"Coba Lagi"**. Tombol ini diberi *event handler* `onClick={fetchMembers}` untuk memanggil ulang API jika ditekan.
+- **Pembersihan:** Blok `finally` memastikan `setLoading(false)` dijalankan apapun hasil akhirnya.
