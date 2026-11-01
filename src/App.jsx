@@ -3,20 +3,19 @@ import Navbar from './components/Navbar';
 import DashboardSummary from './components/DashboardSummary';
 import OrderTable from './components/OrderTable';
 import OrderForm from './components/OrderForm';
+import MemberList from './components/MemberList'; // Memanggil halaman baru
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
   
-  // Rubrik 5a: State array untuk menyimpan daftar pesanan
   const [orders, setOrders] = useState([
     { id: '#SBZ-001', name: 'Ahmad Fikri', service: 'Deep Cleaning', status: 'Proses Cuci' },
     { id: '#SBZ-002', name: 'Budi Santoso', service: 'Fast Cleaning', status: 'Selesai' }
   ]);
 
-  // Fungsi menambah pesanan baru dari komponen OrderForm
   const handleAddOrder = (newOrder) => {
     setOrders([...orders, newOrder]);
-    setCurrentPage('table'); // Pindah otomatis ke halaman tabel setelah nambah data
+    setCurrentPage('table');
   };
 
   return (
@@ -26,6 +25,7 @@ export default function App() {
         {currentPage === 'dashboard' && <DashboardSummary orders={orders} />}
         {currentPage === 'table' && <OrderTable orders={orders} />}
         {currentPage === 'form' && <OrderForm onAddOrder={handleAddOrder} />}
+        {currentPage === 'member' && <MemberList />}
       </main>
     </div>
   );

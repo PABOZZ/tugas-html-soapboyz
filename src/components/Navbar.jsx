@@ -15,6 +15,7 @@ export default function Navbar({ currentPage, setPage }) {
           <li><button onClick={() => {setPage('dashboard'); setIsOpen(false)}} className={`hover:text-blue-300 ${currentPage === 'dashboard' ? 'font-bold' : ''}`}>Dashboard</button></li>
           <li><button onClick={() => {setPage('table'); setIsOpen(false)}} className={`hover:text-blue-300 ${currentPage === 'table' ? 'font-bold' : ''}`}>Daftar Pesanan</button></li>
           <li><button onClick={() => {setPage('form'); setIsOpen(false)}} className={`hover:text-blue-300 ${currentPage === 'form' ? 'font-bold' : ''}`}>Tambah Pesanan</button></li>
+          <li><button onClick={() => {setPage('member'); setIsOpen(false)}} className={`hover:text-blue-300 ${currentPage === 'member' ? 'font-bold' : ''}`}>Daftar Member</button></li>
         </ul>
       </div>
     </nav>
